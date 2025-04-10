@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMuse Blog</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #1DB954, #1ed760);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1DB954;
+        }
+
+        .blog-date {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .blog-excerpt {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #1DB954;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #1ed760;
+            transform: translateX(5px);
+        }
+
+        .back-home {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .back-home:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">MoodMuse Blog</h1>
+            <p>Exploring the connection between music, emotions, and well-being</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81" alt="Music Therapy" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">The Healing Power of Music Therapy</h2>
+                    <div class="blog-date">April 6, 2024</div>
+                    <p class="blog-excerpt">Discover how music therapy can improve physical, emotional, and mental well-being through various therapeutic approaches and interventions.</p>
+                    <a href="blog/music-therapy.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Music and Memory" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Music and Memory: The Emotional Time Machine</h2>
+                    <div class="blog-date">April 5, 2024</div>
+                    <p class="blog-excerpt">Explore how music serves as a powerful tool for emotional recall and personal history, triggering vivid memories from our past.</p>
+                    <a href="blog/music-memory.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae" alt="Cultural Music" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Cultural Perspectives on Music and Emotion</h2>
+                    <div class="blog-date">April 8, 2024</div>
+                    <p class="blog-excerpt">Learn about how different cultures express emotions through music and the universal power of musical connection.</p>
+                    <a href="blog/cultural-perspectives.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Brain Chemistry" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">How Music Affects Your Brain Chemistry</h2>
+                    <div class="blog-date">April 15, 2024</div>
+                    <p class="blog-excerpt">Discover the fascinating science behind how different types of music trigger emotional responses in your brain, releasing neurotransmitters like dopamine and serotonin.</p>
+                    <a href="blog/brain-chemistry.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81" alt="Mood Regulation" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">The Power of Music in Mood Regulation</h2>
+                    <div class="blog-date">April 12, 2024</div>
+                    <p class="blog-excerpt">Learn how to use music as a tool for emotional regulation, from boosting your mood to finding calm during stressful times.</p>
+                    <a href="blog/mood-regulation.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae" alt="Future Technology" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">The Future of Emotional Music Technology</h2>
+                    <div class="blog-date">April 3, 2024</div>
+                    <p class="blog-excerpt">How AI and machine learning are revolutionizing the way we discover and experience music that matches our emotions.</p>
+                    <a href="blog/future-technology.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae" alt="Sleep and Dreams" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Music's Role in Sleep and Dreams</h2>
+                    <div class="blog-date">April 1, 2024</div>
+                    <p class="blog-excerpt">Explore how music influences our sleep patterns and dream experiences, and discover the best genres for better sleep.</p>
+                    <a href="blog/sleep-dreams.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Exercise Music" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">The Perfect Workout Playlist: Science of Music and Exercise</h2>
+                    <div class="blog-date">March 30, 2024</div>
+                    <p class="blog-excerpt">How the right music can boost your workout performance and make exercise more enjoyable.</p>
+                    <a href="blog/workout-music.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81" alt="Productivity Music" class="blog-image">
+                <div class="blog-content">
+                    <h2 class="blog-title">Music for Productivity: Finding Your Focus Flow</h2>
+                    <div class="blog-date">March 28, 2024</div>
+                    <p class="blog-excerpt">Discover which types of music can enhance your productivity and help you achieve a state of flow while working.</p>
+                    <a href="blog/productivity-music.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+
+        <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+</body>
+</html> 
