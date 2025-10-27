@@ -833,8 +833,8 @@
                 
                 const previewButton = document.createElement('button');
                 previewButton.className = 'preview-button';
-                previewButton.innerHTML = 'Preview on Spotify';
-                previewButton.onclick = () => openSpotify(song);
+                previewButton.innerHTML = 'Preview on Youtube';
+                previewButton.onclick = () => openYoutube(song);
                 
                 div.appendChild(songText);
                 div.appendChild(favoriteButton);
@@ -847,10 +847,11 @@
             saveMoodToHistory(currentMood, suggestions);
         }
 
-        function openSpotify(song) {
-            const searchQuery = encodeURIComponent(song);
-            window.open(`https://open.spotify.com/search/${searchQuery}`, '_blank');
-        }
+        function openYouTube(song) {
+  const searchQuery = encodeURIComponent(song + " official music video");
+  window.open(`https://www.youtube.com/results?search_query=${searchQuery}`, '_blank');
+}
+
 
         function resetApp() {
             document.querySelectorAll('.mood-button').forEach(button => {
